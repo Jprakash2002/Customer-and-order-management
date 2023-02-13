@@ -1,0 +1,66 @@
+<br>
+<div class="row">
+    <div class="col">
+        <div class="col-md">
+            <div class="card text-center text-white mb-3" id="total-orders">
+                <div class="card-header">
+                    <h5 class="card-title">Total Orders</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{totord}}</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="col-md">
+            <div class="card text-center text-white mb-3" id="orders-delivered">
+                <div class="card-header">
+                    <h5 class="card-title">Orders Delivered</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{totdel}}</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="col-md">
+            <div class="card text-center text-white mb-3" id="orders-pending">
+                <div class="card-header">
+                    <h5 class="card-title">Orders Pending</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Product</th>
+                            <th>Customer</th>
+                            <th>Date Ordered</th>
+                            <th>Status</th>
+                            
+                        </tr>
+                        {%for i in pending%}
+                        <tr>
+                            
+                            <td>{{i.product}}</td>
+                            <td>{{i.customer}}</td>
+                            <td>{{i.datecreated}}</td>
+                            <td>{{i.status}}</td>
+                        </tr>
+                        {%endfor%}
+                        
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
